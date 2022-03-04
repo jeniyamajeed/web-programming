@@ -1,5 +1,3 @@
-#db_reg.php
-
 <?php
  $host =  "localhost";
  $user =  "root";
@@ -22,16 +20,3 @@ echo nl2br ("\n Record inserted");
 }
 mysqli_close($connection);
 ?>
-
-#db_reg.html
-<!DOCTYPE html>
-<html  lang="en">
-<body>
-<form action="index1.php" method="POST">
-           Name:  <input type="text" name="name"><br><br>
-           Email: <input type="email" name="email"><br><br>
-           Phone: <input type="phone" name="phone"><br><br>
-           <input type="submit" value="Submit" >
-</form>
-</body>
-</html>

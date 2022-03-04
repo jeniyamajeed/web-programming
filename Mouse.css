@@ -1,42 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="Mouse.css">
-</head>
-
-<body>
-#mouse_events.html
-  <div id="container">
-    <div class="smiley-green">
-      <div class="left-eye"></div>
-      <div class="right-eye"></div>
-      <div class="smile"></div>
-    </div>
-
-    <div class="smiley-yellow">
-      <div class="left-eye"></div>
-      <div class="right-eye"></div>
-      <div class="smile"></div>
-    </div>
-
-    <div class="smiley-red">
-      <div class="left-eye"></div>
-      <div class="right-eye"></div>
-      <div class="smile"></div>
-    </div>
-  </div>
-
-  <textarea id="log">Events will show up here!
-</textarea>
-
-  <script src="Mouse.js"></script>
-
-</body>
-</html>
-
-#mouse_events.css
 body,
 html {
   margin: 0;
@@ -215,27 +176,4 @@ html {
   height: 80%;
   top: 60%;
   left: 0%;
-}
-
-#mouse_events.js
-container.onmouseover = container.onmouseout = handler;
-
-function handler(event) {
-
-  function str(el) {                  //el an identifier refers to element
-    if (!el) return "null"
-    return el.className || el.tagName;
-  }
-
-  log.value += event.type + ':  ' +
-    'target=' + str(event.target) +
-    ',  relatedTarget=' + str(event.relatedTarget) + "\n";
-  log.scrollTop = log.scrollHeight;
-
-  if (event.type == 'mouseover') {
-    event.target.style.background = 'pink'
-  }
-  if (event.type == 'mouseout') {
-    event.target.style.background = ''
-  }
 }
